@@ -1,0 +1,1 @@
+$.global.SCM={comp:"G39",from:"^Valores variando",to:"^.15 e .25"};$.evalFile(new File($.fileName).parent.fsName+"/_scm.jsx");

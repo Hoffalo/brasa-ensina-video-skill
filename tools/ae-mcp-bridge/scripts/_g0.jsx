@@ -1,0 +1,3 @@
+(function(){var c,out=[];for(var i=1;i<=app.project.numItems;i++){var it=app.project.item(i);if(it instanceof CompItem&&it.name==="G0")c=it;}
+for(var j=1;j<=c.numLayers;j++){var L=c.layer(j);if(L instanceof ShapeLayer){(function wk(g,pre){for(var q=1;q<=g.numProperties;q++){var p=g.property(q);if(p.propertyType===PropertyType.PROPERTY){try{var v=p.value;if(v!==null&&v!==undefined&&(/Scale|Size|Position|Anchor/.test(p.name)))out.push(pre+p.name+"="+v.toString());}catch(e){}}else if(p.numProperties)wk(p,pre+p.name+"/");}})(L.property("ADBE Root Vectors Group"),"");}}
+return JSON.stringify({status:"success",o:out});})();

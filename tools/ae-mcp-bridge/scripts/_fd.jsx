@@ -1,0 +1,1 @@
+$.global.MCP_FADE={comp:"G37",names:["^\$120","^Campanha","^need-","^Sua necessidade","^Em 2025$","^At. 2025$","^Shape Layer [123]$","^Box [12]$"],t0:24.68,t1:25.3};$.evalFile(new File($.fileName).parent.fsName+"/fadeout.jsx");

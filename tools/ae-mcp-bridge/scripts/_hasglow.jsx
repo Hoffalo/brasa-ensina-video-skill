@@ -1,0 +1,2 @@
+(function(){var c=null,o=[];for(var i=1;i<=app.project.numItems;i++){var it=app.project.item(i);if(it instanceof CompItem&&it.name===$.global.X.comp)c=it;}
+for(var j=1;j<=c.numLayers;j++){var fx=c.layer(j).property("ADBE Effect Parade");if(!fx)continue;for(var f=1;f<=fx.numProperties;f++)if(fx.property(f).matchName==="ADBE Glo2")o.push(c.layer(j).name);}return JSON.stringify({status:"success",o:o});})();

@@ -1,0 +1,1 @@
+$.global.NUDGE={comp:"G49 - Argentina 2 (Claude)",name:"METADE",dx:-85};$.evalFile(new File($.fileName).parent.fsName+"/_nudge.jsx");

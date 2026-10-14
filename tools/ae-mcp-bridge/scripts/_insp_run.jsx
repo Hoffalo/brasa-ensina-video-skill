@@ -1,0 +1,1 @@
+$.global.INSP=["G25","G22","G21"];$.evalFile(new File($.fileName).parent.fsName+"/_insp.jsx");

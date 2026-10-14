@@ -1,0 +1,1 @@
+$.global.SW={"comp": "G47 - Fran\u00e7a x Pol\u00f4nia (Claude)", "layer": "gradua\u00e7\u00e3o \u2013 mestrado", "oldText": "Gradua\u00e7\u00e3o \u00b7 mestrado", "newText": "+ CVEC (vida estudantil): \u20ac105/ano", "t": 15.7};$.evalFile(new File($.fileName).parent.fsName+"/swapanim.jsx");

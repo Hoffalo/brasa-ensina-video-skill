@@ -1,0 +1,1 @@
+$.global.CS={comp:"G40",re:"."};$.evalFile(new File($.fileName).parent.fsName+"/_cs.jsx");

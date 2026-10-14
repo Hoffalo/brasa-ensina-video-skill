@@ -1,0 +1,5 @@
+(function(){var names=$.global.SL,out=[];
+for(var i=1;i<=app.project.numItems;i++){var c=app.project.item(i);if(!(c instanceof CompItem))continue;var hit=false;for(var n=0;n<names.length;n++)if(c.name.indexOf(names[n])===0)hit=true;if(!hit)continue;
+for(var j=1;j<=c.numLayers;j++){var L=c.layer(j);if(L.nullLayer||L instanceof CameraLayer||/^(Deep|BG)/.test(L.name))continue;
+(function walk(g,pre){for(var q=1;q<=g.numProperties;q++){var p;try{p=g.property(q);}catch(e){continue;}if(p.propertyType===PropertyType.PROPERTY){try{if(p.numKeys>1&&p.matchName!=="ADBE Text Document"){for(var k=1;k<p.numKeys;k++){var d=p.keyTime(k+1)-p.keyTime(k);var v1=p.keyValue(k),v2=p.keyValue(k+1);var same=(v1.toString()===v2.toString());if(!same&&d>0.62)out.push(c.name.substr(0,3)+" | "+L.name.substr(0,24)+" | "+pre+p.name+" "+Math.round(p.keyTime(k)*100)/100+"->"+Math.round(p.keyTime(k+1)*100)/100+" ("+Math.round(d*100)/100+"s)");}}}catch(e){}}else{try{if(p.numProperties)walk(p,pre+p.name.substr(0,6)+"/");}catch(e){}}}})(L,"");}}
+return JSON.stringify({status:"success",o:out});})();

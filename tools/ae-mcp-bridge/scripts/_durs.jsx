@@ -1,0 +1,1 @@
+(function(){var o={};for(var i=1;i<=app.project.numItems;i++){var c=app.project.item(i);if(c instanceof CompItem&&/^G\d/.test(c.name)){var nt=0;for(var j=1;j<=c.numLayers;j++)if(c.layer(j) instanceof TextLayer)nt++;o[c.name]=[Math.round(c.duration*100)/100,c.width,nt,c.usedIn.length];}}return JSON.stringify({status:"success",o:o});})();

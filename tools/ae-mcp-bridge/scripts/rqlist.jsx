@@ -1,0 +1,1 @@
+(function(){ var rq=app.project.renderQueue, o=[]; for (var q=1;q<=rq.numItems;q++){ var R=rq.item(q); o.push(q+" "+R.comp.name+" status="+R.status+" render="+R.render+" start="+R.timeSpanStart); } return JSON.stringify({status:"success",rq:o}); })();

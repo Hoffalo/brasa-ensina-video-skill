@@ -1,0 +1,1 @@
+$.global.KT={comp:"G46",names:["mais ou","€11"]};$.evalFile(new File($.fileName).parent.fsName+"/_kt.jsx");

@@ -1,0 +1,1 @@
+$.global.AN="G40";$.evalFile(new File($.fileName).parent.fsName+"/_anim.jsx");

@@ -1,0 +1,4 @@
+(function(){ var c; for (var i=1;i<=app.project.numItems;i++){var it=app.project.item(i); if(it instanceof CompItem && it.name==="G45 - Abertura (Claude)") c=it;}
+ var tmp=c.layers.addText("x"), sp=tmp.property("ADBE Text Properties").property("ADBE Text Document");
+ sp.expression="var o=[];for(var i=2;i<=thisComp.numLayers;i++){var L=thisComp.layer(i);try{var r=L.sourceRectAtTime(time,false);var a=L.toWorld([r.left,r.top]),b=L.toWorld([r.left+r.width,r.top+r.height]);o.push(i+' '+L.name.substr(0,16)+' op='+Math.round(L.opacity)+' w='+Math.round(Math.min(a[0],b[0]))+'..'+Math.round(Math.max(a[0],b[0]))+' y='+Math.round(Math.min(a[1],b[1]))+'..'+Math.round(Math.max(a[1],b[1])));}catch(e){o.push(i+' err');}}o.join('|');";
+ var r=sp.valueAtTime(12.6,false).text; tmp.remove(); return JSON.stringify({status:"success",o:r.split("|")}); })();

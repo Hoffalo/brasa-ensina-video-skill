@@ -1,0 +1,1 @@
+$.global.MCP_DEIT="G41";$.evalFile(new File($.fileName).parent.fsName+"/deitalic.jsx");

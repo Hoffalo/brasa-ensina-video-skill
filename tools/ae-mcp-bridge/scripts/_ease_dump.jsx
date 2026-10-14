@@ -1,0 +1,4 @@
+(function(){var cfg=$.global.X,c=null,o=[];for(var i=1;i<=app.project.numItems;i++){var it=app.project.item(i);if(it instanceof CompItem&&it.name===cfg.comp)c=it;}
+function d(L,p){for(var k=1;k<=p.numKeys;k++){var a=p.keyInTemporalEase(k)[0],b=p.keyOutTemporalEase(k)[0];o.push(L+" "+p.name+" k"+k+" t="+p.keyTime(k).toFixed(2)+" in("+a.speed.toFixed(1)+","+a.influence.toFixed(1)+") out("+b.speed.toFixed(1)+","+b.influence.toFixed(1)+") interp "+p.keyInInterpolationType(k)+"/"+p.keyOutInterpolationType(k));}}
+for(var j=1;j<=c.numLayers;j++){var L=c.layer(j);if(cfg.layers&&("|"+cfg.layers.join("|")+"|").indexOf("|"+L.name+"|")<0)continue;var T=L.property("ADBE Transform Group");d(L.name,T.property("ADBE Position"));d(L.name,T.property("ADBE Opacity"));}
+return JSON.stringify({status:"success",o:o});})();

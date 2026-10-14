@@ -1,0 +1,1 @@
+(function(){ var c; for (var i=1;i<=app.project.numItems;i++){var it=app.project.item(i); if(it instanceof CompItem && it.name==="G37") c=it;} var a=[]; for(var j=1;j<=c.numLayers;j++) a.push(j+" "+c.layer(j).name+" id="+c.layer(j).id); return JSON.stringify({status:"success",l:a}); })();

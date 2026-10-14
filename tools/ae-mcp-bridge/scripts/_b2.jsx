@@ -1,0 +1,1 @@
+$.global.BC=["G0","G41"];$.evalFile(new File($.fileName).parent.fsName+"/_beats.jsx");

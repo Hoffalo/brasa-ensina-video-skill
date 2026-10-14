@@ -1,0 +1,5 @@
+(function(){
+  var shots={"G1 Copy 3":[2,6,9],"G1 Copy 9":[2,6,9]}; var dir=Folder.myDocuments.fsName+"/ae-mcp-bridge/frames/"; var s=[];
+  for (var i=1;i<=app.project.numItems;i++){var it=app.project.item(i); if(it instanceof CompItem && shots[it.name]){ for(var k=0;k<shots[it.name].length;k++){ var f=new File(dir+"before_"+it.name.replace(/ /g,"_")+"_"+shots[it.name][k]+".png"); it.saveFrameToPng(shots[it.name][k],f); s.push(f.name);} } }
+  return JSON.stringify({status:"success",saved:s});
+})();

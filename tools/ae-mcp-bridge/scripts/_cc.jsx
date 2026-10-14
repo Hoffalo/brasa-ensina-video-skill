@@ -1,0 +1,1 @@
+$.global.MCP_CC={comp:"G51b - Planilha (Claude)",t:14,keys:[0.71,14.24]};$.evalFile(new File($.fileName).parent.fsName+"/centercam.jsx");

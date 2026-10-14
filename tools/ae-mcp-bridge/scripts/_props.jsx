@@ -1,0 +1,4 @@
+(function(){var out=[],cfg=$.global.MCP_P,c;for(var i=1;i<=app.project.numItems;i++){var it=app.project.item(i);if(it instanceof CompItem&&it.name===cfg.comp)c=it;}
+function walk(g,path){for(var q=1;q<=g.numProperties;q++){try{var p=g.property(q);var nm=path+"/"+p.name;}catch(e){continue;}if(p.propertyType===PropertyType.PROPERTY){try{if(p.numKeys>0||p.expressionEnabled){var ks=[];for(var k=1;k<=p.numKeys;k++)ks.push(Math.round(p.keyTime(k)*100)/100+":"+String(p.keyValue(k)).replace(/(\.\d)\d+/g,"$1"));out.push(nm+" "+ks.join(" | ")+(p.expressionEnabled?" EXPR":""));}}catch(e){}}else{try{if(p.numProperties)walk(p,nm);}catch(e){}}}}
+for(var j=0;j<cfg.layers.length;j++){var L=c.layer(cfg.layers[j]);out.push("== "+L.name+" pos="+L.property("ADBE Transform Group").property("ADBE Position").value);walk(L,"");}
+return JSON.stringify({status:"success",o:out});})();

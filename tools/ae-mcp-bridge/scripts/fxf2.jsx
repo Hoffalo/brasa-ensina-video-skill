@@ -1,0 +1,2 @@
+$.global.MCP_SHOTS = {"G44 - Custo real (Claude)": [0, 2, 4, 6, 8, 10, 12, 14, 16, 17.3], "G46 - Alemanha (Claude)": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 53.9], "G47 - Fran\u00e7a x Pol\u00f4nia (Claude)": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 55.9], "G48 - Argentina (Claude)": [0, 2, 4, 6, 8, 10, 12, 14, 16, 17.9]}; $.global.MCP_TAG="f2";
+$.evalFile(new File($.fileName).parent.fsName + "/frames_x.jsx");

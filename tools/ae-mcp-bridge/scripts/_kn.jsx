@@ -1,0 +1,1 @@
+$.global.KT={comp:"G51",names:["Null"]};$.evalFile(new File($.fileName).parent.fsName+"/_kt.jsx");

@@ -1,0 +1,1 @@
+$.global.MCP_RT={comp:"G45 - ",anchors:[[0, 0.0], [1.15, 0.97], [7.08, 6.65], [7.48, 6.91], [8.28, 7.85], [9.16, 8.63], [12.7, 11.98]],dur:11.98};$.evalFile(new File($.fileName).parent.fsName+"/retime.jsx");

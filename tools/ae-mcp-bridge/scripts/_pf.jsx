@@ -1,0 +1,1 @@
+$.global.MCP_PFX={comp:"G25",items:[[5,"1. "],[4,"2. "],[3,"3. "]],removeLayer:12};$.evalFile(new File($.fileName).parent.fsName+"/prefixnum.jsx");

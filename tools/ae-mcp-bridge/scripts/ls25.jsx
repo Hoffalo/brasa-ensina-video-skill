@@ -1,0 +1,2 @@
+(function(){ var c; for (var i=1;i<=app.project.numItems;i++){var it=app.project.item(i); if(it instanceof CompItem && it.name==="G25") c=it;} var a=[];
+ for(var j=1;j<=c.numLayers;j++){ var L=c.layer(j), s=j+" "+L.name.substr(0,40); if (L instanceof TextLayer){ var d=L.property("ADBE Text Properties").property("ADBE Text Document").value; s+=" | box="+d.boxText+" font="+d.font; } a.push(s);} return JSON.stringify({status:"success",l:a}); })();

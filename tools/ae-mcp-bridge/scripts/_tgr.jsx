@@ -1,0 +1,1 @@
+$.global.EN=true;$.evalFile(new File($.fileName).parent.fsName+"/_tg.jsx");

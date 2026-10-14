@@ -1,0 +1,1 @@
+(function(){var n=[];for(var i=1;i<=app.project.numItems;i++){var it=app.project.item(i);if(it instanceof CompItem)n.push(it.name);}return JSON.stringify({status:"success",file:app.project.file?app.project.file.fsName:null,comps:n});})();

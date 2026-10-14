@@ -1,0 +1,1 @@
+$.global.MCP_FIT = { comp: "G51b - Planilha (Claude)", times: [13.5, 14.2], keyFrom: [0.06, 0.71], holdTo: 20 };$.evalFile(new File($.fileName).parent.fsName + "/fitcam.jsx");

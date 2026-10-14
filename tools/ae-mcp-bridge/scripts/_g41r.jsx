@@ -1,0 +1,1 @@
+$.global.CX=550;$.global.FS=0.9;$.evalFile(new File($.fileName).parent.fsName+"/_g41.jsx");

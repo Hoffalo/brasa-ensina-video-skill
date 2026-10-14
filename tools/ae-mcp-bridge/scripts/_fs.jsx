@@ -1,0 +1,1 @@
+$.global.FS={comps:["G44","G45","G46","G47","G48","G49","G50","G51"],maxd:0.62,dur:0.45};$.evalFile(new File($.fileName).parent.fsName+"/fixslow.jsx");

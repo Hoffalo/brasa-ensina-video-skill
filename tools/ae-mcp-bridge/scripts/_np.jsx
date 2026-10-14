@@ -1,0 +1,1 @@
+$.global.NP={"comp": "G51b - Planilha (Claude)", "pfx": ["Celula", "Valor"], "dy": 18};$.evalFile(new File($.fileName).parent.fsName+"/_nudgepfx.jsx");

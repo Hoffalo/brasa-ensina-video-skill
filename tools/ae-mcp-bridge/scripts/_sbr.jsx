@@ -1,0 +1,1 @@
+$.global.SB={comp:"G39",t:7};$.evalFile(new File($.fileName).parent.fsName+"/_sb3.jsx");

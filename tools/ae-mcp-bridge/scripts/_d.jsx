@@ -1,0 +1,1 @@
+$.global.DIS={comp:"G40",names:["Shape Layer 1"]};$.evalFile(new File($.fileName).parent.fsName+"/_dis.jsx");

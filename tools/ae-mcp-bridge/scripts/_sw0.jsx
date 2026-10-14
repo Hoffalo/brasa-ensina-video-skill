@@ -1,0 +1,1 @@
+$.global.SW={"comp": "G47 - Fran\u00e7a x Pol\u00f4nia (Claude)", "layer": "SIMB\u00d3LICA", "oldText": "SIMB\u00d3LICA", "newText": "\u20ac178\u2013254", "t": 11.0};$.evalFile(new File($.fileName).parent.fsName+"/swapanim.jsx");

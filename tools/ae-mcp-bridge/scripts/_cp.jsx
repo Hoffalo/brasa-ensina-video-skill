@@ -1,0 +1,1 @@
+$.global.CP={"comp": "G47 - Fran\u00e7a x Pol\u00f4nia (Claude)", "ref": "Box SIMB\u00d3LICA", "t": 25.0, "t0": 29.76, "t1": 30.56, "groups": [["Matr\u00edcula \u00b7 universidade p\u00fabli"]]};$.evalFile(new File($.fileName).parent.fsName+"/centerphase.jsx");

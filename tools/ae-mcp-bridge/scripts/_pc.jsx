@@ -1,0 +1,1 @@
+$.global.PC="G41";$.evalFile(new File($.fileName).parent.fsName+"/_pill.jsx");

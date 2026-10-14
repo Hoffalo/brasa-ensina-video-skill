@@ -1,0 +1,1 @@
+$.global.MCP_P={comp:"G24",layers:[11,12]};$.evalFile(new File($.fileName).parent.fsName+"/_props.jsx");

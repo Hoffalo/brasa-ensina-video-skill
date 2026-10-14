@@ -1,0 +1,8 @@
+(function(){ var o=[];
+ for (var i=1;i<=app.project.numItems;i++){ var c=app.project.item(i); if(!(c instanceof CompItem) || !/^G(1[7-9]|2[1-2]|2[7-9]|3[0-6]|38|42)$/.test(c.name)) continue; var s=c.name+":";
+  for (var j=1;j<=c.numLayers;j++){ var L=c.layer(j);
+   if (L instanceof TextLayer){ var d=L.property("ADBE Text Properties").property("ADBE Text Document").value; s+=" TXT["+d.text.replace(/[\r\u0003]/g,"/")+" "+d.font+" "+Math.round(d.fontSize)+" fill="+(d.applyFill?String(d.fillColor).substr(0,24):"none")+" caps="+d.fontCapsOption+" just="+d.justification+" parent="+(L.parent?L.parent.index:"-")+"]"; }
+   else if (L instanceof ShapeLayer){ var out=[]; (function w(g){ for (var k=1;k<=g.numProperties;k++){ var p=g.property(k); if (p.matchName==="ADBE Vector Graphic - Stroke") out.push("stroke="+String(p.property("ADBE Vector Stroke Color").value).substr(0,24)+" w="+p.property("ADBE Vector Stroke Width").value); if (p.matchName==="ADBE Vector Graphic - Fill") out.push("fill="+String(p.property("ADBE Vector Fill Color").value).substr(0,24)+" op="+p.property("ADBE Vector Fill Opacity").value); if (p.matchName==="ADBE Vector Shape - Rect") out.push("rect="+String(p.property("ADBE Vector Rect Size").value)+" r="+p.property("ADBE Vector Rect Roundness").value+(p.property("ADBE Vector Rect Size").expressionEnabled?" EXPR":"")); if (p.propertyType!==PropertyType.PROPERTY && p.numProperties) w(p); } })(L.property("ADBE Root Vectors Group")); s+=" SHP"+j+"["+out.join(" ")+"]"; }
+   else s+=" AV"+j+"["+L.name.substr(0,16)+"]"; }
+  o.push(s); }
+ return JSON.stringify({status:"success",o:o}); })();

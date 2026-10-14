@@ -1,0 +1,1 @@
+(function(){var o=[];for(var i=1;i<=app.project.numItems;i++){var c=app.project.item(i);if(c instanceof CompItem&&/bertura|^G46|^G45/i.test(c.name))o.push(c.name+" | "+c.width+"x"+c.height+" "+c.duration.toFixed(2)+"s "+c.numLayers+"L");}return JSON.stringify({status:"success",o:o});})();
