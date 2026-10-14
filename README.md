@@ -17,14 +17,14 @@ step so you can review.
 ### Option A: let Claude Code do it
 Open Claude Code and paste:
 
-> Install the skill from https://github.com/Hoffalo/brasa-ensina-video. Clone it into
+> Install the skill from https://github.com/Hoffalo/brasa-ensina-video-skill. Clone it into
 > `~/.claude/skills/brasa-ensina-video`, copy `tools/ae-mcp-bridge` to `~/Documents/ae-mcp-bridge`, install
 > `tools/ae-mcp-bridge/mcp-bridge-auto.jsx` into After Effects' `Scripts/ScriptUI Panels` folder, and tell me what
 > else I need to set up from the README.
 
 ### Option B: by hand
 ```bash
-git clone https://github.com/Hoffalo/brasa-ensina-video ~/.claude/skills/brasa-ensina-video
+git clone https://github.com/Hoffalo/brasa-ensina-video-skill ~/.claude/skills/brasa-ensina-video
 ```
 ```bash
 cp -r ~/.claude/skills/brasa-ensina-video/tools/ae-mcp-bridge ~/Documents/ae-mcp-bridge
