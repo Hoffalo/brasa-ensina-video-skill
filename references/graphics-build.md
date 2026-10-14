@@ -190,3 +190,19 @@ LINE 2"}}`, which centre-justifies
   judge the globe from the frame.
 - SFX must be re-planned after an art rebuild (camera moves and event times change): cards flip on the item cues,
   pins pop / checks tick on the same cues, and one car-pass woosh per comp for the title → overview move.
+
+## Justifying sentences built from fragments: `mergejust.jsx` (Bolsas EUA, 2026-10-14)
+- A multi-line sentence assembled from separate point-text layers (one per highlight word or per spoken chunk)
+  is NOT justified, even if every layer is left-aligned: lines come out ragged. The user counts that as
+  "texts aren't justified". The inventory (`_txtinv.jsx`) only flags BOX vs point per layer; look for paragraphs
+  made of several point layers sharing a column.
+- `mergejust.jsx` (MJ `{comp, groups:[{name, text, runs, cues:[[wordsVisible, t]], ref, frags, widthFrags | width,
+  scale?, leftFrom?}]}`) builds ONE box-text paragraph (FULL_JUSTIFY_LASTLINE_LEFT) with the highlight runs, copies
+  the reference fragment's position/opacity keys, scale and effects, aligns the first line's glyphs to the old
+  ones, and keeps the speech-synced reveal with a word-index Opacity animator ("Revelar", 0.35 s per cue). The
+  fragments are switched off and renamed "[off] ".
+- **Keep the original line breaks**: set the box width to the original first line (`widthFrags` = that line's
+  fragments). A wider box moved "ou o" up to line 1 and pushed it off-frame in the closer camera framing.
+  Paragraphs in the same column that need the same width must also fit it at every camera rest.
+- Match the column: a paragraph under a justified box takes that box's width and scale (`width`, `scale`,
+  `leftFrom`), so G39's two lines at 65 %/58 % became one paragraph at 71 % like the box above.

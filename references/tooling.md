@@ -9,8 +9,14 @@
   yours. Check `Get-Process AfterFX | select Id,StartTime,MainWindowTitle`; if more than one has the project, ask
   the user. Never let them save the stale window. (A windowless AfterFX started by Premiere is the Dynamic Link
   server; leave that one alone.)
-- **Commands stuck at "pending"** = the bridge panel is not running (e.g. after AE/PC restart). Ask the user to open
-  Window → mcp-bridge-auto.jsx with "Auto-run commands" ticked; nothing else is needed.
+- **Commands stuck at "pending"** = the bridge panel is not processing (e.g. after AE/PC restart). Check in order:
+  (1) Window → mcp-bridge-auto.jsx open, "Auto-run commands" ticked; (2) the panel log shows only the two startup
+  lines and `ae_mcp_result.json` is older than the AE start → the panel never read the file: Edit → Preferences →
+  Scripting & Expressions → "Allow Scripts to Write Files and Access Network" must be ON (it can reset after crashes),
+  then close and reopen the panel; (3) "Check for Commands Now" bypasses the timer if it was dropped.
+- **Check that AE has the .aep that Premiere links to** before editing: list the timeline clips' media paths in
+  Premiere. On Bolsas EUA the user had an older copy ("cv Motions (Claude edits).aep") open while the timeline used
+  "cv Motions.aep"; editing the copy would change nothing in the video.
 - **ASCII only** in .jsx. Build configs with Python `json.dumps(ensure_ascii=True)`. Read JSON outputs with an
   explicit encoding (utf-8, falling back to cp1252).
 - **Language traps:**

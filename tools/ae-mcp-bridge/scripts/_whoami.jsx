@@ -1,0 +1,1 @@
+(function(){var n=0;for(var i=1;i<=app.project.numItems;i++)if(app.project.item(i) instanceof CompItem)n++;return JSON.stringify({status:"success",file:app.project.file?app.project.file.fsName:"none",comps:n});})();

@@ -1,0 +1,1 @@
+(function(){var cfg=$.global.X,o={};for(var i=1;i<=app.project.numItems;i++){var c=app.project.item(i);if(c instanceof CompItem)for(var a=0;a<cfg.comps.length;a++)if(cfg.comps[a]===c.name)o[c.name]=Math.round(c.duration*10)/10;}return JSON.stringify({status:"success",o:o});})();
