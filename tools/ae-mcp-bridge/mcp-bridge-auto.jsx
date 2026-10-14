@@ -1762,7 +1762,10 @@ function checkForCommands() {
 
 // Set up timer to check for commands
 function startCommandChecker() {
-    app.scheduleTask("checkForCommands()", checkInterval, true);
+    // Timer calls a standalone poller file, not a panel function: after AE restarts the timer's script engine
+    // could not see checkForCommands(), so commands stayed "pending" (Bolsas EUA, 2026-10-14).
+    var poll = Folder.myDocuments.fsName.replace(/\\/g, "/") + "/ae-mcp-bridge/mcp_poll.jsx";
+    app.scheduleTask('$.evalFile(new File("' + poll + '"))', checkInterval, true);
 }
 
 // Add manual check button

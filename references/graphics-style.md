@@ -74,6 +74,14 @@ Baselines: everything is aligned by the text layer ORIGIN (baseline), never by g
   on green (dark olive ring), never on G0 cards, never on the subtitle.
 - Background: house green Ramp + Grid, no Turbulent Displace.
 
+## 6b. Stacked boxes that belong together (user, 2026-10-14, G35)
+- Two boxes stacked in one column for the same item (a heading box + a table/list box under it, with different widths
+  and edges) "look weird": JOIN them into ONE box with the column's full width, and divide the parts with a
+  separator line (same yellow, same stroke weight as the box, edge to edge). Table row lines are single lines of the
+  same weight, never doubled (a thin rectangle with a stroke draws two lines).
+- Animate gracefully: the box first wraps the heading; when the next part is revealed the box GROWS down in step with
+  it, and its old bottom edge stays behind as the separator (no pop). Side-by-side boxes share top and bottom edges.
+
 ## 7. Verify before showing (every comp)
 - Render with throwaway warm-up frames first (the first 1–2 frames of a `shots.sh` run come out black/incomplete),
   then: the title shot (~1.0 s), mid-move, just after the move, and the fully built end frame.

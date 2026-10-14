@@ -14,6 +14,13 @@
   lines and `ae_mcp_result.json` is older than the AE start → the panel never read the file: Edit → Preferences →
   Scripting & Expressions → "Allow Scripts to Write Files and Access Network" must be ON (it can reset after crashes),
   then close and reopen the panel; (3) "Check for Commands Now" bypasses the timer if it was dropped.
+  (4) If the manual button works but the timer never fires (seen after AE restarts): ask the user to run
+  **File → Scripts → Run Script File → `Documents/ae-mcp-bridge/mcp_poll_start.jsx`** once per session. It schedules
+  the standalone poller `mcp_poll.jsx` on AE's main timer (handles runScriptFile). The working-copy panel now also
+  schedules that poller; installing it in Program Files needs admin. aerun.py may time out while waiting; the
+  command still runs once the panel/poller picks it up, so read `ae_mcp_result.json` before retrying.
+- **A shape rect of height 0 breaks evaluation** ("invalid numeric result (divide by zero?)" on any later read of that
+  layer). Use 0.1 for a single-line rectangle.
 - **Check that AE has the .aep that Premiere links to** before editing: list the timeline clips' media paths in
   Premiere. On Bolsas EUA the user had an older copy ("cv Motions (Claude edits).aep") open while the timeline used
   "cv Motions.aep"; editing the copy would change nothing in the video.
